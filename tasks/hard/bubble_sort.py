@@ -29,7 +29,7 @@
 
 
 def bubble_sort(array: list) -> list:
-    return None
+    return array
 
 
 if __name__ == '__main__':
