@@ -26,12 +26,11 @@
 
 
 def fibonacci(n: int) -> int:
-    fib1 = 0
+    fib1 = 1
     fib2 = 1
-    for i in range (n - 1):
-        fib_sum = fib1 + fib2
-        fib1, fib2 = fib2, fib_sum
-    return fib_sum
+    for i in range(n - 2):
+        fib1, fib2 = fib2, fib1 + fib2
+    return fib2
 
 
 if __name__ == '__main__':

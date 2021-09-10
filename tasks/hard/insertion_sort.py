@@ -21,7 +21,14 @@
 
 
 def insertion_sort(array: list) -> list:
-    pass
+    for idx in range(len(array)):
+        compare = idx - 1
+        key = array[idx]
+        while array[compare] > key and compare >= 0:
+            array[compare + 1] = array[compare]
+            compare -= 1
+        array[compare + 1] = key
+    return array
 
 
 if __name__ == '__main__':

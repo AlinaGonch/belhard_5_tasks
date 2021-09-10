@@ -11,8 +11,12 @@ is_pow_2(13) -> False
 is_pow_2(17) -> False
 """
 
+
 def is_pow_2(number) -> bool:
-    return False
+    i = number
+    while i >= 2:
+        i = i / 2
+    return True if i == 1 else False
 
 
 if __name__ == '__main__':
