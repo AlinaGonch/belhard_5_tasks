@@ -14,6 +14,10 @@ square_or_rectangle(4, 4) -> 16
 
 def square_or_rectangle(side1: int, side2: int) -> int:
     result = None
+    if side1 == side2:
+        result = side1 ** 2
+    else:
+        result = (side1 + side2) * 2
     return result
 
 

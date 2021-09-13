@@ -1,3 +1,4 @@
+
 """
 СОРТИРОВКА ВЫБОРКОЙ
 
@@ -19,6 +20,12 @@
 
 
 def selection_sort(array: list) -> list:
+    for i in range(len(array)):
+        lowest = i
+        for el in range(i + 1, len(array)):
+            if array[lowest] > array[el]:
+                lowest = el
+        array[lowest], array[i] = array[i], array[lowest]
     return array
 
 

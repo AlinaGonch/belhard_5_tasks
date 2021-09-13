@@ -28,6 +28,15 @@ def processing_f(str_with_f: str) -> Union[int, str]:
     :rtype: str
     """
     result = None
+    counter_f = str_with_f.count('f')
+    if counter_f == 0:
+        result = str_with_f.swapcase()
+    if counter_f == 1:
+        result = str_with_f.index('f')
+    if counter_f == 2:
+        result = str_with_f.rindex('f')
+    if counter_f > 2:
+        result = str_with_f[::-1]
     return result
 
 

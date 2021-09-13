@@ -15,6 +15,11 @@ VALUE_LIST = ['a', 'b', 'c', 'd', 'e', 'f']
 
 def list_compose(indexes: list, values: list) -> list:
     result_list = []
+    for ind in indexes:
+        if abs(ind) <= len(values) - 1:
+            result_list.append(values[ind])
+        else:
+            result_list.append(None)
     return result_list
 
 
